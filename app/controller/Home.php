@@ -2,13 +2,14 @@
 
 class Home extends Base
 {
+    function __construct()
+    {
+        echo '<script>console.log("Class: '.__class__.'\nFile: '.__FILE__.'");</script>';
+    }
+    
     function index()
     {
-        echo file_exists('app/view/home/index.php');
-        $view = file_get_contents('app/view/home/index.php');
-        var_dump($view);
-        echo "loading index view";
-        exit;
+        echo $this->load_view('home/index.php');
     }
 
 }
