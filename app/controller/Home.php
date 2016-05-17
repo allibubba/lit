@@ -6,8 +6,8 @@ class Home extends Base
     {
         echo '<script>console.log("Class: '.__class__.'\nFile: '.__FILE__.'");</script>';
     }
-    
-    function index()
+
+    function index( $segment_var = null )
     {
         echo $this->load_view('home/index.php');
     }

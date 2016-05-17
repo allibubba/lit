@@ -8,7 +8,8 @@ $_SERVER['REQUEST_URI_PATH'] = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 $segments = explode('/', $_SERVER['REQUEST_URI_PATH']);
 $controller  = ucfirst($segments[1]);
 $method  = $segments[2];
+$arguments  = array_slice($segments, 3);
 
 
 $obj = new $controller();
-$obj->$method();
+$obj->$method($arguments);
