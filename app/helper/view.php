@@ -9,9 +9,13 @@ trait View
      *    @param string
      *    @return string
      */
-    function load_view($file=null)
+    function load_view($file=null, $data=null)
     {
         if($file ==null){throw new Exception('No file passed to view');}
-        return file_get_contents("app/view/$file");
+
+        Twig_Autoloader::register();
+        $loader = new Twig_Loader_Filesystem('templates');
+        $twig = new Twig_Environment($loader);
+        return $twig->render($file, $data);
     }
 }

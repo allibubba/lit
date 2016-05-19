@@ -9,7 +9,11 @@ class Home extends Base
 
     function index( $segment_var = null )
     {
-        echo $this->load_view('home/index.php');
+        $data['alpha'] = "Alpha";
+        $data['beta'] = "Beta";
+
+        echo $this->load_view('home/index.html', $data);
+        //echo $twig->render('index.html', array('the' => 'variables', 'go' => 'here'));
     }
 
 }
