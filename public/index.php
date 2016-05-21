@@ -32,9 +32,9 @@
 */
 
 # set application directory relative to this file
-$app_directory = 'app';
-$vendor_directory = 'vendor';
-$view_directory = 'templates';
+$app_directory = '../app';
+$vendor_directory = '../vendor';
+$view_directory = '../templates';
 
 
 /*
@@ -46,4 +46,4 @@ $view_directory = 'templates';
 define('APPLICATIONPATH', $app_directory.DIRECTORY_SEPARATOR);
 define('VENDORPATH', $vendor_directory.DIRECTORY_SEPARATOR);
 define('VIEWPATH', $view_directory.DIRECTORY_SEPARATOR);
-require_once APPLICATIONPATH.'/core/Lit.php';
+require_once APPLICATIONPATH.'core/Lit.php';

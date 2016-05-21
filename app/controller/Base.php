@@ -1,5 +1,5 @@
 <?php
-include 'app/helper/view.php';
+include APPLICATIONPATH.'helper/view.php';
 
 class Base
 {
@@ -7,7 +7,7 @@ class Base
 
     function __construct()
     {
-        // echo __class__ . " has been loaded";
+        echo __class__ . " has been loaded";
     }
 
 }
