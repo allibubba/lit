@@ -1,9 +1,10 @@
 <?php
-include APPLICATIONPATH.'helper/view.php';
+namespace Lit;
 
 class Base
 {
-    use View;
+
+    use \Helper\View;
 
     function __construct()
     {

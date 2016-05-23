@@ -1,5 +1,11 @@
 {
     "require": {
         "twig/twig": "1.6.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Lit\\":"app/controllers/",
+            "Helper\\":"app/helpers/"
+        }
     }
 }

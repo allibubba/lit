@@ -1,4 +1,5 @@
 <?php
+namespace Lit;
 
 class Home extends Base
 {

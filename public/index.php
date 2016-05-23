@@ -35,7 +35,7 @@
 $app_directory = '../app';
 $vendor_directory = '../vendor';
 $view_directory = '../templates';
-
+$debug = true;
 
 /*
 * ------------------------------------------------------
@@ -46,4 +46,7 @@ $view_directory = '../templates';
 define('APPLICATIONPATH', $app_directory.DIRECTORY_SEPARATOR);
 define('VENDORPATH', $vendor_directory.DIRECTORY_SEPARATOR);
 define('VIEWPATH', $view_directory.DIRECTORY_SEPARATOR);
-require_once APPLICATIONPATH.'core/Lit.php';
+define('DEBUG', $debug);
+echo APPLICATIONPATH.'core/Lit.php';
+require_once APPLICATIONPATH.'lib/Lit.php';
+
