@@ -46,6 +46,7 @@ $debug = true;
 define('APPLICATIONPATH', $app_directory.DIRECTORY_SEPARATOR);
 define('VENDORPATH', $vendor_directory.DIRECTORY_SEPARATOR);
 define('VIEWPATH', $view_directory.DIRECTORY_SEPARATOR);
+define('BASENAME', 'Lit\\');
 define('DEBUG', $debug);
 require_once APPLICATIONPATH.'lib/Lit.php';
 
