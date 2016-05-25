@@ -1,16 +1,17 @@
 <?php
 
-require_once VENDORPATH.'/twig/twig/lib/Twig/Autoloader.php';
+require VENDORPATH."autoload.php";
 
-spl_autoload_register(function ($class_name) {
-        include APPLICATIONPATH.'/controller/' . $class_name . '.php';
-});
-
-$_SERVER['REQUEST_URI_PATH'] = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
-$segments = explode('/', $_SERVER['REQUEST_URI_PATH']);
-$controller  = ucfirst($segments[1]);
-$method  = $segments[2];
-$arguments  = array_slice($segments, 3);
-
+$base = new \Lit\Base();
+$controller  = BASENAME.ucfirst($base->segment(1));
+$method  = $base->segment(2);
+// TODO: move controller instantiation inside base
 $obj = new $controller();
-$obj->$method($arguments);
+$obj->$method();
+
+if(DEBUG){
+    echo "<pre>"; 
+    var_dump( get_class_methods($obj));
+    var_dump(get_declared_classes()); 
+    echo "</pre>";
+};

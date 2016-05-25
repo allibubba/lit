@@ -39,7 +39,7 @@ $debug = true;
 
 /*
 * ------------------------------------------------------
-*  set constants
+*  set Constants
 * ------------------------------------------------------
 */
 
@@ -48,5 +48,11 @@ define('VENDORPATH', $vendor_directory.DIRECTORY_SEPARATOR);
 define('VIEWPATH', $view_directory.DIRECTORY_SEPARATOR);
 define('BASENAME', 'Lit\\');
 define('DEBUG', $debug);
-require_once APPLICATIONPATH.'lib/Lit.php';
+
+/*
+* --------------------------------------------------------------------
+* Use Lit
+* --------------------------------------------------------------------
+*/
+require_once APPLICATIONPATH.'core/Lit.php';
 
