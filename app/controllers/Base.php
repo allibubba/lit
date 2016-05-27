@@ -23,12 +23,14 @@ class Base
 
         $this->obj = new $controller;
 
-            if(method_exists($this->obj , $method_name))
-            {
-                $this->obj->$method_name();
-            }else{
-                throw new Exception('method not defined');
-            }
+        // TODO: add routine to route no passed method to an index method
+        if(method_exists($this->obj , $method_name))
+        {
+            $this->obj->$method_name();
+        }else{
+            $class_name = get_class($this->obj);
+            throw new \Exception("Undefined method: $method_name called from: $class_name");
+        }
     }
 
 }
