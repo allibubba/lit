@@ -36,6 +36,8 @@ class Base
         {
             $method_name = $this->method_name;
             $this->obj->$method_name();
+        }elseif(method_exists($this->obj, 'index')){
+            $this->obj->index();
         }else{
             $class_name = get_class($this->obj);
             throw new \Exception("Undefined method: $method_name called from: $class_name");
