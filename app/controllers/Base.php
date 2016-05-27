@@ -10,27 +10,37 @@ class Base
     function __construct()
     {
         if(DEBUG){echo '<script>console.info("Class: '.__class__.'\nFile: '.__FILE__.'");</script>';}
-        $this->load_controller();
+        $this->initialize();
     }
 
     /**
     *    @return void
     */
-    protected function load_controller()
+    private function initialize()
     {
-        $controller  = BASENAME.ucfirst($this->segment(1));
-        $method_name = $this->segment(2);
-
-        $this->obj = new $controller;
-
-        // TODO: add routine to route no passed method to an index method
-        if(method_exists($this->obj , $method_name))
+        $this->controller  = BASENAME.ucfirst($this->segment(1));
+        $this->method_name = $this->segment(2);
+        if(class_exists($this->controller))
         {
+            $this->instantiate_controller();
+        }
+    }
+
+    /**
+    *    @return void
+    */
+    private function instantiate_controller()
+    {
+        $this->obj = new $this->controller;
+        if(method_exists($this->obj , $this->method_name))
+        {
+            $method_name = $this->method_name;
             $this->obj->$method_name();
         }else{
             $class_name = get_class($this->obj);
             throw new \Exception("Undefined method: $method_name called from: $class_name");
         }
     }
+
 
 }
