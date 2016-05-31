@@ -6,7 +6,7 @@ use \Helper\Uri;
 // $base = new \Lit\Base();
 $router = new \Lit\Router();
 // Define routes
-$router->get('home', function() { new App\Home; });
+$router->get('home', function() { $obj = new \App\Home(); $obj->index(); });
 
 
 $base = new \Lit\Base();
@@ -14,7 +14,6 @@ $verb = $base->data['method'];
 $controller = $base->data['controller'];
 $dispatcher = new \Lit\Dispatcher($router);
 $dispatcher->handle(new \Lit\Request($verb, $controller));
-
 
 if(DEBUG){
     echo "<pre>"; 
