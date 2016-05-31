@@ -2,7 +2,7 @@
 namespace App;
 use \Helper\View;
 
-class Home
+class Home extends \Lit\App
 {
     function __construct()
     {
