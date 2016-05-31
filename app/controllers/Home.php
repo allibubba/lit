@@ -1,6 +1,5 @@
 <?php
 namespace App;
-use \Helper\View;
 
 class Home extends \Lit\App
 {
