@@ -33,6 +33,7 @@
 
 # set application directory relative to this file
 $app_directory = '../app';
+$system_directory = '../system';
 $vendor_directory = '../vendor';
 $view_directory = '../templates';
 $debug = true;
@@ -43,7 +44,8 @@ $debug = true;
 * ------------------------------------------------------
 */
 
-define('APPLICATIONPATH', $app_directory.DIRECTORY_SEPARATOR);
+define('APPPATH', $app_directory.DIRECTORY_SEPARATOR);
+define('SYSPATH', $system_directory.DIRECTORY_SEPARATOR);
 define('VENDORPATH', $vendor_directory.DIRECTORY_SEPARATOR);
 define('VIEWPATH', $view_directory.DIRECTORY_SEPARATOR);
 define('BASENAME', 'Lit\\');
@@ -64,5 +66,5 @@ if(DEBUG){
 * Use Lit
 * --------------------------------------------------------------------
  */
-require_once APPLICATIONPATH.'core/Lit.php';
+require_once SYSPATH.'core/Lit.php';
 

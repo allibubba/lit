@@ -1,7 +1,8 @@
 <?php
-namespace Lit;
+namespace App;
+use \Helper\View;
 
-class Home extends Base
+class Home
 {
     function __construct()
     {

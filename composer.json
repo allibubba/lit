@@ -4,8 +4,9 @@
     },
     "autoload": {
         "psr-4": {
-            "Lit\\":"system/controllers/",
-            "Helper\\":"app/helpers/"
+            "App\\":"app/controllers/",
+            "Lit\\":"system/core/",
+            "Helper\\":"system/helpers/"
         }
     }
 }
