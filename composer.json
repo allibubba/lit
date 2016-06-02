@@ -5,8 +5,9 @@
     "autoload": {
         "psr-4": {
             "App\\":"app/controllers/",
+            "Helper\\":"app/helpers/",
             "Lit\\":"system/core/",
-            "Helper\\":"system/helpers/"
+            "Module\\":"system/modules/"
         }
     }
 }

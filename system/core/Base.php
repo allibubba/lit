@@ -4,7 +4,7 @@ namespace Lit;
 class Base
 {
 
-    use \Helper\Uri;
+    use \Module\Uri;
 
     public $data;
 

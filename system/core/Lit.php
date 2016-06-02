@@ -1,12 +1,11 @@
 <?php
 
 require VENDORPATH."autoload.php";
-use \Helper\Uri;
+use \Module\Uri;
 
-// $base = new \Lit\Base();
 $router = new \Lit\Router();
-// Define routes
-$router->get('home', function() { $obj = new \App\Home(); $obj->index(); });
+$router->get('home', function() { (new \App\Home)->index(); });
+$router->post('data', function() { (new \App\Home)->input(); });
 
 
 $base = new \Lit\Base();

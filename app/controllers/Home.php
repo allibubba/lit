@@ -13,4 +13,8 @@ class Home extends \Lit\App
         $data['beta'] = "we are Beta";
         echo $this->load_view('home/index.html', $data);
     }
+    function input()
+    {
+        echo "post response";
+    }
 }

@@ -4,7 +4,7 @@ namespace Lit;
 class App
 {
 
-    use \Helper\Uri;
-    use \Helper\View;
+    use \Module\Uri;
+    use \Module\View;
 
 }
