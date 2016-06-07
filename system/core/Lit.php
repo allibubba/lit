@@ -4,8 +4,7 @@ require VENDORPATH."autoload.php";
 use \Module\Uri;
 
 $router = new \Lit\Router();
-$router->get('home', function() { (new \App\Home)->index(); });
-$router->post('data', function() { (new \App\Home)->input(); });
+require APPPATH."routes.php";
 
 
 $base = new \Lit\Base();

@@ -10,7 +10,7 @@ class Base
 
     function __construct()
     {
-        if(DEBUG){echo '<script>console.info("Class: '.__class__.'\nFile: '.__FILE__.'");</script>';}
+        //if(DEBUG){echo '<script>console.info("Class: '.__class__.'\nFile: '.__FILE__.'");</script>';}
         $this->initialize();
     }
 

@@ -15,6 +15,9 @@ class Home extends \Lit\App
     }
     function input()
     {
-        echo "post response";
+        header('Content-Type: application/json');
+        $data['success'] = true;
+        $data['message'] = "successfull request to /date as Home::input()";
+        echo json_encode($data);
     }
 }

@@ -36,7 +36,7 @@ $app_directory = '../app';
 $system_directory = '../system';
 $vendor_directory = '../vendor';
 $view_directory = '../templates';
-$debug = true;
+$debug = false
 
 /*
 * ------------------------------------------------------
