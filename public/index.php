@@ -36,35 +36,8 @@ $app_directory = '../app';
 $system_directory = '../system';
 $vendor_directory = '../vendor';
 $view_directory = '../templates';
-$debug = false
+$debug = false;
+$db_debug = false;
 
-/*
-* ------------------------------------------------------
-*  set Constants
-* ------------------------------------------------------
-*/
-
-define('APPPATH', $app_directory.DIRECTORY_SEPARATOR);
-define('SYSPATH', $system_directory.DIRECTORY_SEPARATOR);
-define('VENDORPATH', $vendor_directory.DIRECTORY_SEPARATOR);
-define('VIEWPATH', $view_directory.DIRECTORY_SEPARATOR);
-define('BASENAME', 'Lit\\');
-define('DEBUG', $debug);
-
-/*
-* --------------------------------------------------------------------
-* Enable PHP debugging
-* --------------------------------------------------------------------
- */
-if(DEBUG){
-    ini_set('display_errors', 1);
-    ini_set('display_startup_errors', 1);
-    error_reporting(E_ALL);
-}
-/*
-* --------------------------------------------------------------------
-* Use Lit
-* --------------------------------------------------------------------
-*/
-require_once SYSPATH.'core/Lit.php';
+require_once $system_directory.'/core/Lit.php';
 
