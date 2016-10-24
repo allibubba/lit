@@ -11,18 +11,11 @@ class Base
     function __construct()
     {
         //if(DEBUG){echo '<script>console.info("Class: '.__class__.'\nFile: '.__FILE__.'");</script>';}
-        $this->initialize();
+        $this->data['method']     = $this->getMethod();
+        $this->data['controller'] = $this->getController();
+        $this->data['action']     = $this->getAction();
     }
 
-    /**
-    *    @return void
-    */
-    private function initialize()
-    {
-        $this->data['method'] = $this->getMethod();
-        $this->data['controller']  = $this->getController();
-        $this->data['action'] = $this->getAction();
-    }
     /**
     *    return http verb 
     *    @return string
