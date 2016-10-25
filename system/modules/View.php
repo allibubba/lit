@@ -9,7 +9,7 @@ trait View
      *    @param string
      *    @return string
       */
-    function load_view($file=null, $data=null)
+    function loadView($file=null, $data=null)
     {
         if($file ==null){throw new Exception('No file passed to view');}
 

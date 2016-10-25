@@ -7,11 +7,11 @@ class Home extends \Lit\App
     {
     }
 
-    function index( $segment_var = null )
+    function index()
     {
         $data['alpha'] = "I am Alpha";
         $data['beta'] = "we are Beta";
-        echo $this->load_view('home/index.html', $data);
+        echo $this->loadView('home/index.html', $data);
     }
     function input()
     {
